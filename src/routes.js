@@ -8,7 +8,7 @@ const routes = [
   //{ path: "/", redirect: "/users" },
   { path: "/users", component: UserList, alias: "/" },
   { path: "/pets", component: PetList },
-  { path: "/user-detail", component: UserDetail },
+  { path: "/user-detail/:userId", component: UserDetail },
   { path: "/:pathMatch(.*)*", component: NotFound },
   //{ path: "/:pathMatch(.*)*", redirect:"/" }, redirect to home page
 ];
