@@ -1,21 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import UserList from "./pages/UserList.vue";
-import PetList from "./pages/PetList.vue";
-import { createRouter, createWebHistory } from "vue-router";
+
 import store from "./store";
+import router from "./routes";
 
-const routes = [
-  //{ path: "/", redirect: "/users" },
-  { path: "/users", component: UserList, alias: "/" },
-  { path: "/pets", component: PetList },
-];
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes: routes,
-  linkActiveClass: "active",
-});
 
 //createApp(App).mount('#app')
 const app = createApp(App);
