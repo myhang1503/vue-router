@@ -6,6 +6,9 @@
             {{type}}
         </span>
     </div>
+    <div>
+        <button class="btn btn-info" @click="handleClickGoToDetail">Go to detail</button>
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,17 @@ export default {
             type: Object,
         }
     },
+    methods:{
+        handleClickGoToDetail(){
+            //this.$router.push(`/user-detail/${this.user.id}`);
+            this.$router.push({
+                name: "user-detail",
+                params:{
+                    userId: this.user.id,
+                },
+            });
+        }
+    }
 };
 </script>
 
